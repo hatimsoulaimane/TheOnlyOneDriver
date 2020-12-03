@@ -1,0 +1,249 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page Accueil{% endblock %}
+
+{% block body %}
+    {{ include('partials/_navbar.html.twig') }}
+
+
+        {% for message in app.flashes('message')%}
+            <div class="alert alert-success" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+{#<h2 data-text="Creative" class="H2">Creative</h2>#}
+
+
+    {# FIN NAVBAR #}
+
+    {# <div class=" neon"> #}
+    {# <a href="#">Active</a> #}
+    {# <a href="#">Link</a> #}
+    {# <a href="#">Link</a> #}
+    {# <a href="#">Disabled</a> #}
+    {# </div> #}
+
+    {# <div class="container"> #}
+    {# <div class="content"> #}
+    {# <h1>ljnlfkjjvlehvvlfehvl khfelvhje</h1> #}
+    {# <p>lpijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj #}
+    {# lihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhl #}
+    {# lkhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhl</p> #}
+    {# </div> #}
+    {# <img class="car" src="{{ asset('./images/superb.png') }}"> #}
+    {# </div> #}
+    <!-- Footer -->
+{#<div class="container">#}
+{#    <img src="{{ asset('./images/paris.jpg') }}" class="img-fluid">#}
+{#</div>#}
+    <div class="container mt-4 presentation">
+        <div class="media">
+            <div class="media-body">
+                <h5 class="mt-0">Service de qualité</h5>
+                <p>Avec The Only One Driver vous êtes accompagné, et vous profitez d'un service de VTC de qualité
+                    répondant à toutes vos demandes. Particulier ou entreprise, du simple transfert à la mise à
+                    disposition. <br>
+                    Un prix fixe : quelque soit l’état du trafic , vous paierez le même prix pour votre déplacement.
+                    Fini le stress dans les embouteillages à regarder les chiffres du compteur défilés… Finies les
+                    majorations des courses matinales injustement imposées au client… Finie la préoccupation d’attendre
+                    un chauffeur en retard avec l’angoisse de ne pas arriver à l’heure…
+                    Bienvenu à bord!!
+            </div>
+            <img src="{{ asset('./images/superb.png') }}" class="mr-3 w-25 car mt-5" alt="stop-covid">
+        </div>
+    </div>
+
+    <div class="container mt-4 mb-5 covid">
+        <div class="media">
+            <img src="{{ asset('./images/covid-19.jpg') }}" class="mr-3 w-25" alt="stop-covid">
+            <div class="media-body">
+                <h5 class="mt-0">Mesures sanitaires</h5>
+                <p class="mb-5">Depuis avril 2020 pour faire face à l'épidémie de Covid-19, je tiens à vous informer que toutes les
+                    mesures sanitaires sont respectées à bord de mon véhicule : désinfection du véhicule après chaque
+                    client, mise à disposition de gel hydroalcoolique, plexiglass entre le conducteur et les passagers,
+                    port du masque par moi-même et mise à disposition d’un masque si besoin.
+                    Merci pour votre confiance.</p>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center"><u>Un large choix de prestations pour répondre à vos besoins</u></h2>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center ">
+                    <i class="fas fa-luggage-cart fa-3x text-warning" aria-hidden="true"></i>
+                    <div class="title">
+                        <h4>Bagages</h4>
+                    </div>
+                    <div class="text">
+                        <span>Pas de frais supplémentaires, le prix de vos valises est inclus dans la prestation.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                    <i class="fas fa-euro-sign fa-3x text-danger" aria-hidden="true"></i><i class="fas fa-credit-card text-danger"></i>
+                    <div class="title">
+                        <h4>Paiement</h4>
+                    </div>
+                    <div class="text mb-5">
+                        <span>Paiement CB sécurisé. On vous donne la possibilité de régler votre transfert ou votre mise à disposition à bord du véhicule par carte bancaire ou en espèces.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                    <i class="fas fa-user-secret fa-3x text-warning" aria-hidden="true"></i>
+                    <div class="title">
+                        <h4>Chauffeur</h4>
+                    </div>
+                    <div class="text mb-5">
+                        <span>Un chauffeur professionnel, discret, ponctuel et élégant. Nous vous garantissons un Service haut de gamme avec une conduite sécuritaire</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                    <i class="fas fa-hand-holding-heart fa-3x text-danger" aria-hidden="true"></i>
+                    <div class="title">
+                        <h4>Confort</h4>
+                    </div>
+                    <div class="text">
+                        <span>Véhicules haut de gamme pour plus de confort. Voyagez avec plus de services pour un trajet exceptionnel.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                    <i class="fas fa-wheelchair fa-3x text-warning" aria-hidden="true"></i>
+                    <div class="title">
+                        <h4>P.M.R</h4>
+                    </div>
+                    <div class="text">
+                        <span>Notre chauffeur est aussi conducteur accompagnateur de Personne Handicapée.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="box-part text-center">
+                    <i class="fas fa-headset fa-3x text-danger" aria-hidden="true"></i>
+                    <div class="title">
+                        <h4>24h/24 - 7j/7</h4>
+                    </div>
+                    <div class="text">
+                        <span>Contactez nous directement au 07 60 29 81 71. Vous pouvez également nous contacter directement par email afin d'établir votre devis gratuit.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="w-25">
+    <h2 class="text-center mt-5 mb-5 "><i class="fas fa-pen-fancy"></i><span class="temoigne ml-1 mr-1">"Témoignages Clients"</span><i class="fas fa-pen-fancy"></i></h2>
+    <div class="container temoignages mb-5">
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <div id="carouselExampleIndicators" class="carousel slide mt-0" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="single-box">
+                                        {# <div class="img-area"><img src="" alt=""></div> #}
+                                        <div class="img-text">
+                                            <blockquote class="blockquote text-right">
+                                                <p class="mb-0">"Ponctuel, personne très sympathique et professionnelle"</p>
+                                                <footer class="blockquote-footer"><cite title="Source Title">Albert Einstein</cite></footer>
+                                            </blockquote>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-box">
+                                        {# <div class="img-area"><img src="" alt=""></div> #}
+                                        <div class="img-text">
+                                            <blockquote class="blockquote text-right">
+                                                <p class="mb-0">"Chauffeur ponctuel , souriant , attentionné, en un mot excellent
+                                                    service"</p>
+                                                <footer class="blockquote-footer"><cite title="Source Title">Jhon Smith</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-box">
+                                        {# <div class="img-area"><img src="" alt=""></div> #}
+                                        <div class="img-text">
+                                            <blockquote class="blockquote text-right">
+                                                <p class="mb-0">"Merci à votre chauffeur qui nous a permis d'avoir notre train"</p>
+                                                <footer class="blockquote-footer"><cite title="Source Title">katty Perry</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="single-box">
+                                        {# <div class="img-area"><img src="" alt=""></div> #}
+                                        <div class="img-text">
+                                            <blockquote class="blockquote text-right">
+                                                <p class="mb-0">"J'ai été très satisfait du service. Merci et à bientôt"</p>
+                                                <footer class="blockquote-footer"><cite title="Source Title">Elon Musk</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-box">
+                                        {# <div class="img-area"><img src="" alt=""></div> #}
+                                        <div class="img-text">
+                                            <blockquote class="blockquote text-right">
+                                                <p class="mb-0">"Le chauffeur s’est montré particulièrement aimable et correct. Je le
+                                                    remercie."</p>
+                                                <footer class="blockquote-footer"><cite title="Source Title">Michel Jackson</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-box">
+                                        {# <div class="img-area"><img src="" alt=""></div> #}
+                                        <div class="img-text">
+                                            <blockquote class="blockquote text-right">
+                                                <p class="mb-0">"Si je suis amenée à venir à nouveau sur Paris, je ferai sans aucune
+                                                    hésitation de nouveau appel à vos services."</p>
+                                                <footer class="blockquote-footer"><cite title="Source Title">Hercule Poirot</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {{ include('partials/_footer.html.twig') }}
+
+{% endblock %}

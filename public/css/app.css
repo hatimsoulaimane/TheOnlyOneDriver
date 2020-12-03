@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monoton&family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+.body {
+  box-sizing: border-box;
+}
+
+@keyframes animate {}
+.temoigne {
+  font-family: "Parisienne", cursive;
+}
+
+.carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -70px;
+}
+
+.car {
+  width: 100%;
+  right: 70px;
+  bottom: 60px;
+  animation: run 2s linear 1;
+}
+
+@keyframes run {
+  0% {
+    transform: translate(-30px, -30px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+}
+.logo {
+  font-family: "Monoton", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff2b5;
+}
+.logo:hover {
+  transform: translateY(-5px);
+}
+
+.navbar {
+  padding: 0 1rem;
+}
+.navbar i {
+  font-size: 0.9rem;
+}
+.navbar .navbar-nav .btn, .navbar .navbar-nav .form-control {
+  border-radius: 0;
+}
+.navbar .navbar-nav .nav-item {
+  font-family: "Poiret One", cursive;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  margin: 0.1rem 0.2rem;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #dcedc8;
+}
+.navbar .navbar-nav .nav-item:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu {
+  border-radius: 0;
+  display: inline-block;
+  min-width: 350px;
+  left: 0;
+  border: none;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table a {
+  font-size: 1rem;
+  color: #444 !important;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table td {
+  vertical-align: middle;
+  padding: 0 1rem;
+  text-align: center;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table td i {
+  font-size: 1.2rem;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table .article-prestation-image {
+  padding: 0;
+  width: 20%;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table .article-prestation-titre-prix {
+  font-weight: bolder;
+  font-size: 1rem;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table .article-prestation-titre-prix .prix {
+  font-style: italic;
+  font-size: 0.7rem;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table .article-prestation-quantite .augmenter {
+  color: #26a69a;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table .article-prestation-quantite .diminuer {
+  color: #f57c00;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu table .article-prestation-supprimer {
+  color: #e53935;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 4rem auto;
+}
+.login-form h2 {
+  font-family: "Bungee Inline", cursive;
+  text-align: center;
+}
+.login-form h2:hover {
+  color: #01579b;
+  transform: translateY(-2px);
+  text-shadow: 0 0.7rem 1rem teal;
+}
+.login-form form {
+  box-shadow: 1px 3px 9px 13px rgba(0, 0, 0, 0.06);
+}
+.login-form form h3 {
+  text-align: center;
+  color: #c8e6c9;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 1.5rem;
+  background-color: #444;
+}
+.login-form form .login-form-content {
+  padding: 1rem;
+}
+.login-form form button {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.card-wrapper {
+  height: 400px;
+  width: 250px;
+  perspective: 1000px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-wrapper:hover .content {
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+
+.face-front, .face-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: black;
+  backface-visibility: hidden;
+}
+
+.face-back {
+  transform: rotateY(180deg);
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inner {
+  overflow: hidden;
+}
+
+.inner img {
+  transition: all 1.5s ease;
+}
+
+.inner:hover img {
+  transform: scale(1.5);
+}
+
+.map-container-section {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-container-section iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}Profile de {{ app.user.nomComplet }}  {% endblock %}
+
+{% block body %}
+
+
+    {{ include('partials/_navbar.html.twig') }}
+    <div class="container mt-5 mb-5">
+        {% for message in app.flashes('message') %}
+            <div class="alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <h3>Profile de {{ app.user.nomComplet }}</h3>
+        <p>Nom : {{ app.user.nom }}</p>
+        <p>Prénom : {{ app.user.prenom }}</p>
+        <p>E-mail : {{ app.user.email }}</p>
+        <a href="{{ path('app_users_profil_modifier') }}" class="btn btn-primary">Modifier profile</a>
+    </div>
+
+    <div class="container mb-5">
+        <h3>Commandes de {{ app.user.nomComplet }} ({{ app.user.commande|length }})</h3>
+        <p></p>
+        <p></p>
+    </div>
+
+
+    {{ include('partials/_footer.html.twig') }}
+{% endblock %}
+
+
+

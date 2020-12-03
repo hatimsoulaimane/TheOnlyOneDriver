@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}Modification  {% endblock %}
+
+{% block body %}
+{{ include('partials/_navbar.html.twig') }}
+
+
+<div class="container mt-5 mb-5">
+    <h3>Modification du profile de {{ app.user.nomComplet }}</h3>
+    {{ form(form) }}
+
+</div>
+
+
+
+
+{#{{ include('partials/_footer.html.twig') }}#}
+{% endblock %}
+

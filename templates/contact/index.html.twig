@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    {{ include('partials/_navbar.html.twig') }}
+
+<div class="container">
+    <section class="my-5">
+        {% for message in app.flashes('message')%}
+            <div class="alert alert-success" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <h2 class="h1-responsive font-weight-bold text-center my-5">Nous Contacter</h2>
+        <p class="text-center w-responsive mx-auto pb-5">N’hésitez pas à nous contacter pour toute demande de transport ou de mise à disposition d’un véhicule avec chauffeur, nous nous ferons un plaisir de vous renseigner.</p>
+
+        <div class="row">
+
+            <div class="col-lg-5 mb-lg-0 mb-4 ">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        {{ form(contactForm) }}
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="height: 400px">
+{#                    <iframe src="https://maps.google.com/maps?q=Paris&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0"#}
+{#                            style="border:0" allowfullscreen></iframe>#}
+
+                    <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/carte-touristique-ile-de-france_437381?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=caption&captionBar=false"></iframe><p><a href="//umap.openstreetmap.fr/fr/map/carte-touristique-ile-de-france_437381">Voir en plein écran</a></p>
+                </div>
+                <!-- Buttons-->
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <a class="btn-floating blue accent-1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                        <p>Vanves, 92170</p>
+                        <p class="mb-md-0">France</p>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="btn-floating blue accent-1">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <p>07 60 29 81 71</p>
+                        <p class="mb-md-0">7j/7j, 24h/24h</p>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <a class="btn-floating blue accent-1">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <p>TheOnlyOneDriver@gmail.com</p>
+                        <p class="mb-0">info@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    {{ include('partials/_footer.html.twig') }}
+{% endblock %}

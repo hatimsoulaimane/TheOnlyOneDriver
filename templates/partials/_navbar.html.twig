@@ -1,0 +1,109 @@
+{# DEBUT NAVBAR #}
+{#<nav class="navbar second-navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">#}
+{#    <!-- SideNav slide-out button -->#}
+{#    <div class="float-left">#}
+{#        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>#}
+{#    </div>#}
+{#    <!-- Breadcrumb-->#}
+{#    <div class="breadcrumb-dn mr-auto text-white">#}
+{#        <p>Material Design for Bootstrap</p>#}
+{#    </div>#}
+{#    <ul class="nav navbar-nav nav-flex-icons ml-auto">#}
+{#        <li class="nav-item">#}
+{#            <a class="nav-link"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>#}
+{#        </li>#}
+{#        <li class="nav-item">#}
+{#            <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>#}
+{#        </li>#}
+{#        <li class="nav-item">#}
+{#            <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>#}
+{#        </li>#}
+{#        <li class="nav-item dropdown">#}
+{#            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"#}
+{#               aria-haspopup="true" aria-expanded="false">#}
+{#                Dropdown#}
+{#            </a>#}
+{#            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">#}
+{#                <a class="dropdown-item" href="#">Action</a>#}
+{#                <a class="dropdown-item" href="#">Another action</a>#}
+{#                <a class="dropdown-item" href="#">Something else here</a>#}
+{#            </div>#}
+{#        </li>#}
+{#    </ul>#}
+{#</nav>#}
+{#<div class="container">#}
+{#    <img src="{{ asset('./images/vtchomme.jpg') }}" class="img-responsive" height="400" width="700">#}
+{#</div>#}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="haut">
+    <a class="navbar-brand logo text-danger H2" data-text="The Only One Driver" title="Accueil-site" href="{{ path('home_accueil') }}">The Only One Driver</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('home_accueil') }}">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('home_transfert') }}"><i
+                            class="fas fa-dolly-flatbed"></i><span class="ml-1">Transferts</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('home_prestation') }}"><i class="fas fa-user-secret"></i><span class="ml-1">Prestations</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('home_vehicule') }}"><i class="fas fa-car-alt"></i><span class="ml-1">Véhicule</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('contact') }}"><i class="fa fa-envelope"></i><span class="ml-1">Contact</span></a>
+            </li>
+        </ul>
+        {# <form class="form-inline my-2 my-lg-0 mr-auto"> #}
+        {# <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search"> #}
+        {# <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> #}
+        {# </form> #}
+        <ul class="navbar-nav">
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('back_accueil') }}"><i class="fas fa-tachometer-alt"></i>Dashboard<span
+                                class="sr-only">(current)</span></a>
+                </li>
+            {% else %}
+                <li class="nav-item dropdown">
+                <span class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-credit-card"></i>Panier
+                </span>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <table class="table table-sm border-0 panier">
+                            <tbody class="contenu-panier"></tbody>
+                        </table>
+                    </div>
+                </li>
+            {% endif %}
+            {% if is_granted('ROLE_USER') %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="{{ path('app_users') }}">
+                        <i class="fas fa-user-circle"></i>Mon Compte
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout') }}">
+                        <i class="fas fa-power-off"></i>Déconnexion</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_register') }}"><i
+                                class="fas fa-user-edit"></i>Inscription</a>
+                </li>
+            {% endif %}
+
+        </ul>
+    </div>
+</nav>

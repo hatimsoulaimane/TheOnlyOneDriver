@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ titre_page }}
+{% endblock %}
+
+{% block body %}
+{#    {{ parent() }}#}
+    {{ include('partials/_navbar.html.twig') }}
+
+    <div class="login-form">
+        <h2>{{ titre_section }}</h2>
+        {{ form_start(registrationForm) }}
+        <h3>formulaire d'inscription</h3>
+        <div class="login-form-content">
+            {{ form_widget(registrationForm) }}
+            <button type="submit" class="btn btn-primary">s'inscrire</button>
+        </div>
+        {{ form_end(registrationForm) }}
+    </div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}
+        {{ titre_page }}
+    {% endblock %}
+
+{% block body %}
+    {{ include('partials/_navbar.html.twig') }}
+
+    <main role="main">
+
+        <section class="jumbotron text-center mt-5">
+            <div class="container">
+                <h1 class="jumbotron-heading">Prochainement d'autres véhicules de luxe disponible !!!</h1>
+                <p class="lead text-muted">A bord d’une voiture confortable, vivez une expérience inédite en vous déplaçant autrement. C’est l’une des voitures la plus sûre et la plus confortable de sa catégorie. Dans ce véhicule, tout a été pensé pour le bien être du chauffeur mais aussi des passagers. Véritable bijou de technologie et de confort, vous serez comblés par l’habitacle et la qualité Skoda!</p>
+            </div>
+        </section>
+
+        <div class="container">
+        <img src="{{ asset('./images/superb.png') }}" class="img-responsive" height="400" width="700">
+        </div>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <div class="inner">
+                                <img class="card-img-top" src="{{ asset('./images/coffre.jpg') }}" alt="coffre">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{ asset('./images/porteSkoda.jpg') }}" alt="porte Skoda">
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <div class="inner">
+                                <img class="card-img-top" src="{{ asset('./images/banquetteArriere.jpg') }}" alt="banquette Arriere">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{ asset('./images/clientevtc.jpg') }}" alt="cliente vtc">
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{ asset('./images/skodaprofile.jpg') }}" alt="voiture skoda">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{ asset('./images/tablette.jpg') }}" alt="tablette">
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                    </div>
+{#                    <div class="col-md-4">#}
+{#                        <div class="card mb-4 box-shadow">#}
+{#                            <img class="card-img-top" src="{{ asset('./images/boisson.jpg') }}" alt="Card image cap">#}
+{#                            <div class="card-body">#}
+
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="card mb-4 box-shadow">#}
+{#                            <img class="card-img-top" src="{{ asset('./images/chargeurs-tel.jpg') }}" alt="Card image cap">#}
+{#                            <div class="card-body">#}
+
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="card mb-4 box-shadow">#}
+{#                            <img class="card-img-top" src="{{ asset('./images/tpe.jpg') }}" alt="Card image cap">#}
+{#                            <div class="card-body">#}
+
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="container">
+
+        <h3 class="text-center mb-5 font-weight-bold"><u>Services à bord</u></h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="inner">
+                        <img class="card-img-top" src="{{ asset('./images/boisson.jpg') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ asset('./images/chargeurs-tel.jpg') }}" alt="Card image cap">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ asset('./images/tpe.jpg') }}" alt="Card image cap">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" height="260" src="{{ asset('./images/siegebaby.jpg') }}" alt="Card image cap">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" height="260" src="{{ asset('./images/wifi.jpg') }}" alt="Card image cap">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ asset('./images/journaux.jpg') }}" alt="Card image cap">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ include('partials/_footer.html.twig') }}
+
+{% endblock %}
+
+
